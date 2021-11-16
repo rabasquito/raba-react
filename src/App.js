@@ -8,7 +8,7 @@ function App() {
     <div className="mi-app">
       
       <NavBar/>
-      <ItemListContainer greeting="Hola mundo coder"/>
+      <ItemListContainer greeting="Hola mundo coder" />
       
 
     </div>
