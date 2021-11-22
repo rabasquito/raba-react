@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import {Button} from 'react-bootstrap'
 
-export const ItemCount = ({stock}) => {
+export const ItemCount = ({disponible}) => {
     const [counter, setCounter] = useState(1)
 
     const incrementar = () => {
-        if(stock>counter) {
+        if(disponible>counter) {
             setCounter(counter+1);
         } else {
             alert("No hay más stock de este producto!");
@@ -31,7 +31,7 @@ export const ItemCount = ({stock}) => {
                <Button variant="primary" onClick={decrementar} >-</Button>
                <Button variant="primary" onClick={incrementar} >+</Button>
            </div>
-           <Button variant="primary" size="lg" onClick={respuesta} >Agregar al carrito</Button>
+           <Button variant="primary" size="lg" onClick={respuesta} >Agregar</Button>
         </div>
     )
 }
