@@ -11,8 +11,7 @@ export const ItemList = ({productos}) => {
             <h2>Productos</h2>
             <hr/>
             <Row>
-                {productos.map((prod) => <Item prod={prod}/> )}
-
+                {productos.map((prod) => <Item key={prod.id} { ...prod }/>)}
             </Row>
         </Container>
     )
