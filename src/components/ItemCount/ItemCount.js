@@ -20,9 +20,7 @@ export const ItemCount = ({disponible}) => {
         }
     }
     
-    const respuesta = () => {
-        alert(`Agregaste ${counter} items al carrito`);
-    }
+    
     
     return (
         <div>
@@ -31,7 +29,7 @@ export const ItemCount = ({disponible}) => {
                <Button variant="primary" onClick={decrementar} >-</Button>
                <Button variant="primary" onClick={incrementar} >+</Button>
            </div>
-           <Button variant="primary" size="lg" onClick={respuesta} >Agregar</Button>
+           
         </div>
     )
 }
