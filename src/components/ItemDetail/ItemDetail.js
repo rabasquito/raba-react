@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {ItemCount} from '../ItemCount/ItemCount'
-import {Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
+
 
 export const ItemDetail = ({id, img, name, price, desc, disponible}) => {
 
+    const {agregarAlCarrito, isInCart} = useContext(CartContext)
+    const [counter, setCounter] = useState(1)
     const[agregado, setAgregado] = useState(false);
 
     const respuesta = () => {
-        console.log(`Item agregado: `,
+        agregarAlCarrito({
             id,
             name,
-            price
-        );
+            price,
+            img,
+            disponible
+        });
         setAgregado(true);
     }
 
@@ -24,12 +29,16 @@ export const ItemDetail = ({id, img, name, price, desc, disponible}) => {
                 <p className="card-text">Precio: $ {price}</p>
                 <p className="card-text">{desc}</p>
             {
-                !agregado
-                ? <ItemCount disponible={disponible} />
-                : <Link to="/cart" className="btn btn-success">Finalizar Compra</Link>
+                !isInCart(id)
+                    ? <ItemCount 
+                        disponible={disponible} 
+                        counter={counter} 
+                        setCounter={setCounter} 
+                        onAdd={respuesta} 
+                    />
+                    : <Link to="/cart" className="btn btn-success">Finalizar Compra</Link>
             }
             </div>
-            <Button variant="primary" size="lg" onClick={respuesta} >Agregar</Button>
 
         </div>
     )
