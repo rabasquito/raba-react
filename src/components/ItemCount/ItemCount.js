@@ -17,9 +17,7 @@ export const ItemCount = ({disponible, counter, setCounter, onAdd}) => {
         } else {
             alert("No se puede disminuir más!");
         }
-    }
-    
-    
+    }    
     
     return (
         <div>

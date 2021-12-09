@@ -8,7 +8,6 @@ export const ItemDetail = ({id, img, name, price, desc, disponible}) => {
 
     const {agregarAlCarrito, isInCart} = useContext(CartContext)
     const [counter, setCounter] = useState(1)
-    const[agregado, setAgregado] = useState(false);
 
     const respuesta = () => {
         agregarAlCarrito({
@@ -16,9 +15,8 @@ export const ItemDetail = ({id, img, name, price, desc, disponible}) => {
             name,
             price,
             img,
-            disponible
+            counter
         });
-        setAgregado(true);
     }
 
     return (
