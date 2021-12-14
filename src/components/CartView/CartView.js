@@ -8,7 +8,7 @@ export const CartView = () => {
     const {carrito, vaciarCarrito} = useContext(CartContext)
 
     const calcularTotal = () => {
-       /* const subTotales= carrito.map((prod) => prod.price * prod.counter);
+        /*const subTotales= carrito.map((prod) => prod.price * prod.counter);
         let total = 0;
         subTotales.map((subTotal) => total += subTotal);*/
 
@@ -43,7 +43,7 @@ export const CartView = () => {
             <hr/>
             <div>
                 <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar Carrito</button>
-                <button className="btn btn-success">Finalizar mi Compra</button>
+                <Link to="/Checkout" className="btn btn-success">Finalizar mi Compra</Link >
             </div>
         </div>
     )
