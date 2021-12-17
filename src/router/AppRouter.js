@@ -10,7 +10,7 @@ import {ItemListContainer} from '../components/ItemListContainer/ItemListContain
 export const AppRouter = () => {
     
     const routes = useRoutes([
-        {path: "/", element: <CarouselContainer/>},
+        {path: "/", element: <><CarouselContainer/><ItemListContainer/></>},
         {path: "/productos/:catId", element: <ItemListContainer/>},
         {path: "/detail/:itemId", element: <ItemDetailContainer/>},
         {path: "/cart", element: <CartView />},
