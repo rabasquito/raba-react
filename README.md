@@ -1,70 +1,57 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SuplesUy
 
 ## Available Scripts
 
-In the project directory, you can run:
+SuplesUy es un e-commerce de venta de suplementos deportivos. Fue desarrollado en el marco de la realización del curso de ReactJS de CoderHouse, con la autoría de Rodrigo Rabasquiño. Como tecnologías base, utiliza Node, Sass, y el framework ReactJS para el desarrollo.
 
-### `yarn start`
+## Ejecutando el proyecto localmente
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Requisitos previos
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Para correr el proyecto en una máquina local, se debe tener instalado Node en su versión 14.15.1.
 
-### `yarn test`
+### Ejecutando el servidor de Node
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Una vez clonado el repositorio, para poder correr el proyecto sólo basta con ejecutar los siguientes comandos:
 
-### `yarn build`
+### `npm i`
+### `npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Esto va a ejecutar SuplesUy en modo de desarrollo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El sitio se puede visitar en [http://localhost:3000](http://localhost:3000) en cualquier navegador.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Principales decisiones de diseño
 
-### `yarn eject`
+Para describir las decisiones de diseño, se detalla a continuación la estructura de carpetas del proyecto y la intención de cada una.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### assets
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contiene todas las imágenes y demás assets estáticos del proyecto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Contiene todos los componentes de React que son utilizados en el proyecto, cada uno con sus estilos correspondientes si aplica.
 
-## Learn More
+### context
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contiene el objeto `CartContext` utilizado para encapsular y almacenar el contexto de la aplicación utilizando Context API.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### data
 
-### Code Splitting
+Contiene información de prueba, utilizada al comienzo del proyecto para tener un mock-up de los datos que luego fueron leídos de Firebase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### firebase
 
-### Analyzing the Bundle Size
+Contiene el archivo de configuración utilizado para conectarse a Firebase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### helpers
 
-### Making a Progressive Web App
+Contiene dos funciones estáticas útiles:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `pedirDatos`: función de prueba para establecer un delay de 3 segundos a la hora de devolver los datos contenidos en la carpeta `data`
+- `validarDatos`: función utilizada para validar los datos ingresados por el usuario a la hora de ejecutar y confirmar una compra
 
-### Advanced Configuration
+### router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contiene el componente `AppRouter` utilizado para definir las rutas de la SPA.
