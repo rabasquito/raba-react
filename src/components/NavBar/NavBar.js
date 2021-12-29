@@ -1,6 +1,6 @@
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import './NavBar.scss'
 
 export const NavBar = () => {
    
@@ -8,7 +8,7 @@ export const NavBar = () => {
     return (
     
         <header className="header">
-            <Link to="/"><h1>LOGO</h1></Link>
+            <Link to="/"><h1>SuplesUy</h1></Link>
             <nav>
                 <ul>
                     <li><Link to="/productos/vitaminas">Vitaminas</Link></li>
