@@ -55,3 +55,7 @@ Contiene dos funciones estáticas útiles:
 ### router
 
 Contiene el componente `AppRouter` utilizado para definir las rutas de la SPA.
+
+## GIF con el procedimiento de una compra
+
+![compra](https://user-images.githubusercontent.com/75456191/147621378-721f33b9-761a-4b7f-ab9e-21c90b0984db.gif)
